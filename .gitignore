@@ -1,0 +1,4 @@
+fizzbuzz
+fizzbuzz.o
+.gdb*
+.peda*
