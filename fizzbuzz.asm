@@ -1,3 +1,10 @@
+; Fizzbuzz!
+; Iterate over 1 thru 20.
+; If the counter is divisible by 3, print fizz.
+; If the counter is divisible by 5, print buzz.
+; If the counter is divisible by 3 and 5, print fizzbuzz.
+; If the counter is not divisible by 3 nor 5, print the counter.
+;
 BITS 32
 
 section .data
@@ -20,8 +27,6 @@ section .text
         div ecx             ; divide the dividend by the divisor (eax: 0x01; ecx: 0x03)
         cmp edx, 0x00       ; Check if the remainder is zero.
         je condition_fizz   ; if the remainder was zero, we found a fizz which potentially also has a fizzbuzz!
-        xor ecx, ecx
-        xor eax, eax
         xor ebx, ebx
         xor edx, edx
         mov eax, [counter]  ; prepare the dividend
